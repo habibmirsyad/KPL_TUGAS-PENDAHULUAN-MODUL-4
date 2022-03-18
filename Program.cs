@@ -10,7 +10,17 @@ namespace tpModul4_1302201138
     {
         public string SapaUser(T nama)
         {
-            return "Halo user "+ nama;
+            return "Halo user " + nama;
+        }
+    }
+
+    class DataGeneric<T>
+    {
+        public T data;
+
+        public void printData()
+        {
+            Console.WriteLine("Data yang tersimpan adalah: " + data);
         }
     }
     internal class Program
@@ -18,8 +28,12 @@ namespace tpModul4_1302201138
 
         static void Main(string[] args)
         {
-            HaloGeneric<string> gen = new HaloGeneric<string>();
-            Console.WriteLine(gen.SapaUser("Habib"));
+            HaloGeneric<string> Hgen = new HaloGeneric<string>();
+            Console.WriteLine(Hgen.SapaUser("Habib"));
+
+            DataGeneric<string> Dgen = new DataGeneric<string>();
+            Dgen.data = "1302201138";
+            Dgen.printData();
         }
     }
 }
