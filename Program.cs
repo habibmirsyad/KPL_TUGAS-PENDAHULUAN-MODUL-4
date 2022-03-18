@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace tpModul4_1302201138
 {
+    class HaloGeneric<T>
+    {
+        public string SapaUser(T nama)
+        {
+            return "Halo user "+ nama;
+        }
+    }
     internal class Program
     {
-        public class HaloGeneric
-        {
-            public stringa SapaUser(string nama)
-            {
-                return "Halo user "+ nama;
-            }
-        }
 
         static void Main(string[] args)
         {
-            HaloGeneric gen = new HaloGeneric();
+            HaloGeneric<string> gen = new HaloGeneric<string>();
             Console.WriteLine(gen.SapaUser("Habib"));
         }
     }
